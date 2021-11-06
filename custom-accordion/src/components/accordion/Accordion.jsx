@@ -1,7 +1,6 @@
 import './Accordion.styles.scss';
 
 const Accordion = (props) => {
-
     return(
         <div className='wrapper'>
             <button className='toggle-btn'>
