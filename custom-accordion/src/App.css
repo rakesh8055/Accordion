@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
 .App {
-  text-align: center;
   font-family: 'Open Sans', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
+}
+
+.header {
+  width: 459px;
+  text-align: left;
+  font-weight: 700;
 }
