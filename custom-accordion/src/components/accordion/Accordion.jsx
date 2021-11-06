@@ -1,16 +1,21 @@
+import { useState } from 'react';
 import './Accordion.styles.scss';
 
 const Accordion = (props) => {
+    const [active, setActive] = useState(false);
+
+    const toggle = () => setActive(prev => !prev);
+
     return(
         <div className='wrapper'>
-            <button className='toggle-btn'>
+            <button onClick={toggle} className='toggle-btn'>
                 <h4>{props.title}</h4>
-                <span>+</span>
+                <span>{active ? '-' : '+'}</span>
             </button>
-            <div className='content'>
+            <div className={`content ${active && 'active'}`}>
                 <p>{props.text}</p>
                 <hr></hr>
-                <button className='close-btn'>Close</button>
+                <button onClick={toggle} className='close-btn'>Close</button>
             </div>
         </div>
     )
