@@ -14,6 +14,7 @@ const Accordion = (props) => {
             </button>
             <div className={`content ${active && 'active'}`}>
                 <p>{props.text}</p>
+                <p><a href="#"> Check if you're a British citizen</a>{` on GOV.UK.`}</p>
                 <hr></hr>
                 <button onClick={toggle} className='close-btn'>Close</button>
             </div>
