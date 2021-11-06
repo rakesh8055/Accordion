@@ -1,14 +1,17 @@
-const Accordion = () => {
+import './Accordion.styles.scss';
+
+const Accordion = (props) => {
+
     return(
         <div className='wrapper'>
-            <button>
-                <h4>Title</h4>
+            <button className='toggle-btn'>
+                <h4>{props.title}</h4>
                 <span>+</span>
             </button>
             <div className='content'>
-                <p>Content</p>
+                <p>{props.text}</p>
                 <hr></hr>
-                <button>Close</button>
+                <button className='close-btn'>Close</button>
             </div>
         </div>
     )
