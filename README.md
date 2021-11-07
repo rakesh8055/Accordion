@@ -1,6 +1,6 @@
 # Accordion
 
-To Launch the application:
+To Launch the application: Navigate to custom-accordion and execute the below command.
 
 npm start
 
