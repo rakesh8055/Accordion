@@ -8,3 +8,9 @@ test('Verify the header in loginPage', () => {
     const header = getByTestId('login-header');
     expect(header).toHaveLength(1);
 })
+
+test('Verify the google login button', () => {
+    const { getByTestId } = render(<LoginPage/>);
+    const googleLoginBtn = getByTestId('google-login-btn');
+    expect(googleLoginBtn).toHaveLength(1);
+})
