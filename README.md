@@ -9,11 +9,11 @@ Open http://localhost:3000 to view it in the browser.
 
 At http://localhost:3000/ you will see the public variant of the accordion:
 
-Login Page
+Login Page available at '/login'
 
 ![Login Page](/acc-images/login-page.png?raw=true "Login Page")
 
-Accordion Public Variant - Desktop
+Accordion Public Variant - Desktop available at '/'
 
 ![Accordion Public Desktop view](/acc-images/accordion-public-desktop.png?raw=true "Accordion Public Desktop view")
 
@@ -21,7 +21,7 @@ Accordion Public Variant - Mobile
 
 ![Accordion Public Mobile view](/acc-images/accordion-public-mobile.png?raw=true "Accordion Public Mobile view")
 
-Accordion Adviser Variant - Desktop
+Accordion Adviser Variant - Desktop - available at '/adviser/
 
 ![Accordion Adviser Desktop view](/acc-images/accordion-adviser-desktop.png?raw=true "Accordion Adviser Desktop view")
 
