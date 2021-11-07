@@ -60,7 +60,6 @@
     }
 
     .content {
-        display: none;
         border: 1px solid #004B88;
         border-top: none;
         text-align: left;
@@ -75,10 +74,6 @@
             font-weight: 700;
             cursor: pointer;
         }
-    }
-
-    .active {
-        display: block;
     }
 }
 

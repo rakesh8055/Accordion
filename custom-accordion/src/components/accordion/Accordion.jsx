@@ -19,12 +19,15 @@ const Accordion = (props) => {
                 {props.type === 'Adviser' && <button data-testid='reference-btn' className='reference-btn'>Reference</button>}
                 <span data-testid='plus-minus-toggle'>{active && props.clicked === props.index ? '-' : '+'}</span>
             </button>
-            <div className={`content ${active && props.clicked === props.index && 'active'}`}>
-                <p data-testid='content-text'>{props.text}</p>
-                <p><a href="#"> Check if you're a British citizen</a>{` on GOV.UK.`}</p>
-                <hr></hr>
-                <button data-testid='close-btn' onClick={toggle} className='close-btn'>Close</button>
-            </div>
+            {
+                active && props.clicked === props.index && 
+                <div className='content'>
+                    <p data-testid='content-text'>{props.text}</p>
+                    <p><a href="#"> Check if you're a British citizen</a>{` on GOV.UK.`}</p>
+                    <hr></hr>
+                    <button data-testid='close-btn' onClick={toggle} className='close-btn'>Close</button>
+                </div>
+            }
         </div>
     )
 }
