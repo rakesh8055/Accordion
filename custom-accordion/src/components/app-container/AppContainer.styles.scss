@@ -1,0 +1,17 @@
+.sign-out {
+    text-align: right;
+    width: 100%;
+    cursor: pointer;
+
+    button, a {
+        margin-right: 30%;
+        border: none;
+        background-color: gray;
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+        font-weight: 700;
+        text-decoration: none;
+        cursor: pointer;
+    }
+}

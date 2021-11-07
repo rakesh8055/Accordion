@@ -1,8 +1,21 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './Accordion.styles.scss';
+import { auth } from '../../firebase/firebase.utils';
+import { useNavigate } from 'react-router';
 
 const Accordion = (props) => {
     const [active, setActive] = useState(false);
+    let navigate = useNavigate();
+
+    useEffect(() => {
+        if(!auth.currentUser) {
+            if(props.type === 'Adviser') {
+                navigate('/login');
+            } else {
+                navigate('/');
+            }
+        }
+    },[])
 
     const toggle = () => {
         setActive(prev => !prev);
@@ -16,7 +29,7 @@ const Accordion = (props) => {
                     {props.type === 'Adviser' && <div data-testid='tag-container' className='tag-container'><span>Adviser</span></div>}
                     <h4 data-testid='title'>{props.title}</h4>
                 </div>
-                {props.type === 'Adviser' && <button data-testid='reference-btn' className='reference-btn'>Reference</button>}
+                {props.type === 'Adviser' && <span data-testid='reference-btn' className='reference-btn'>Reference</span>}
                 <span data-testid='plus-minus-toggle'>{active && props.clicked === props.index ? '-' : '+'}</span>
             </button>
             {

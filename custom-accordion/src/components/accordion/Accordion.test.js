@@ -2,6 +2,7 @@ import React from 'react';
 import Accordion from './Accordion';
 import { render, fireEvent, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
+import {BrowserRouter} from 'react-router-dom';
 
 const props = {
     type: 'Public',
@@ -11,25 +12,25 @@ const props = {
 }
 
 test('verify title of Accordion', () => {
-    const { getByTestId } = render(<Accordion {...props}/>)
+    const { getByTestId } = render(<BrowserRouter><Accordion {...props}/></BrowserRouter>)
     const accTitle = getByTestId('title');
     expect(accTitle.textContent).toBe(props.title);
 })
 
 test('verify plus button to appear on load', () => {
-    const { getByTestId } = render(<Accordion {...props}/>)
+    const { getByTestId } = render(<BrowserRouter><Accordion {...props}/></BrowserRouter>)
     const plusMinusToggle = getByTestId('plus-minus-toggle');
     expect(plusMinusToggle.textContent).toBe('+');
 })
 
 test('verify content text does not appear on load', () => {
-    const { getByTestId } = render(<Accordion {...props}/>)
+    const { getByTestId } = render(<BrowserRouter><Accordion {...props}/></BrowserRouter>)
     const text = screen.queryByTestId('content-text');
     expect(text).toBe(null);
 })
 
 test('verify the toggle functionality', () => {
-    const { getByTestId } = render(<Accordion {...props}/>)
+    const { getByTestId } = render(<BrowserRouter><Accordion {...props}/></BrowserRouter>)
     const plusMinusToggle = getByTestId('plus-minus-toggle');
     const toggleBtn = getByTestId('toggle-btn');
 
@@ -41,7 +42,7 @@ test('verify the toggle functionality', () => {
 })
 
 test('verify close button functionality', () => {
-    const { getByTestId } = render(<Accordion {...props}/>)
+    const { getByTestId } = render(<BrowserRouter><Accordion {...props}/></BrowserRouter>)
     const toggleBtn = getByTestId('toggle-btn');
     fireEvent.click(toggleBtn);
     const clostBtn = getByTestId('close-btn');
