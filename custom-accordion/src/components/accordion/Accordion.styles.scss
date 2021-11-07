@@ -1,3 +1,9 @@
+.header {
+    width: 459px;
+    text-align: left;
+    font-weight: 700;
+  }
+
 .wrapper {
     display: flex;
     flex-direction: column;
@@ -8,24 +14,51 @@
     font-size: 18px;
 
     .toggle-btn {
-        width: 100%;
         height: 48px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: white;
+        width: 100%;
+        background-color: transparent;
         font-size: inherit;
         cursor: pointer;
         border: 1px solid #004B88;
         color: #004B88;
         text-align: left;
         padding: 0px 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
 
-        span {
-            font-size: inherit;
-            font-weight: 700;
+        .reference-btn {
+            margin: 10px;
+            background-color: white;
+            border: 1px solid #018176;
+            color: #018176;
+            border-radius: 1px;
+        }
+        .title-content{
+            .tag-container {
+                display: flex;
+                justify-content: flex-start;
+                span {
+                    margin-top: 5px;
+                    font-size: 14px;
+                    padding: 5px;
+                    background: #006278;
+                    color: white;
+                    border: 1px solid #006278;
+                    border-radius: 1px;
+                    font-weight: 700;
+                }
+            }
+            h4 {
+                margin: 0;
+            }
         }
     }
+
+    .adviser-btn {
+        height: unset;
+    }
+
     .content {
         display: none;
         border: 1px solid #004B88;
@@ -36,7 +69,7 @@
 
         .close-btn {
             border: none;
-            background-color: white;
+            background-color: transparent;
             text-decoration: underline;
             color: #004B88;
             font-weight: 700;
@@ -48,3 +81,21 @@
         display: block;
     }
 }
+
+.adviser {
+    background: #E6EFF2;
+}
+
+@media screen and (max-width: 1026px) {
+    .wrapper {
+      width: 288px;
+    }
+  
+    .text-container {
+      height: 100%;
+    }
+  
+    .toggle-btn { 
+      height: 72px;
+    }
+  }

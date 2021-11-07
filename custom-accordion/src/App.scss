@@ -9,8 +9,14 @@
   height: 100vh;
 }
 
-.header {
+.page-header {
   width: 459px;
   text-align: left;
   font-weight: 700;
+}
+
+@media screen and (max-width: 1026px) {
+  .page-header {
+    width: 288px;
+  }
 }
